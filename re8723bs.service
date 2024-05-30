@@ -1,0 +1,12 @@
+[Unit]
+Description=Check syslog for specific log entries and reload rtl8723bs module
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/re8723bs.sh
+User=root
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
